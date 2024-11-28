@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family:'Poppins';
+   /* background-image:url(fondo3.jpeg) ;*/
+   background-color: #ffffff;
+}
+header{
+    height: 10vh;
+    width: 10vw;
+    /*background-image:url(landscape.jpg) ;*/
+    /*background-image: url(fondo2.jpg);*/
+
+    background-size: cover;
+}
+.navbar
+{
+    position: absolute;
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.navbar a{
+    color: #000000;
+}
+.navbar .logo{
+    font-size: 2em;
+    font-weight: bold;
+
+}
+
+.navbar .nav-links ul{
+    display: flex;
+
+}
+.navbar .nav-links ul li{
+    margin: 0 25px;
+
+}
+.navbar .nav-links ul li.active a{
+    color: red;
+    font-weight: 600;
+}
+.navbar .menu-hamburguer{
+    display: none;
+    position: absolute;
+    width: 35px;
+    right: 50px;
+    top: 50px;
+}
+/*por ahora*/
+.menu{
+    padding: 80px;
+    text-align: center;
+    /*background: #ffffff;*/
+    background-image: url(/imagenes/fondo4.avif);
+    color: rgb(255, 255, 255);
+      
+}
+/*definicion de proyecto*/
+.banner{
+    background-image:linear-gradient(100deg,#000000,#00000020), url(/imagenes/fondo5.jpg);
+    height: 20rem;
+    background-size: cover;
+    background-position: center;
+}
+.content-banner{
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 5rem 0;
+}
+.content-banner p{
+    color: aliceblue;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+.content-banner h2{
+    color: #ffff;
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.content-banner a{
+    margin-top: 2rem;
+    text-decoration: none;
+    color: rgb(61, 105, 144);
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    border-radius: 3rem;
+}
+
+
+/*Reduccion de pantalla*/
+
+@media screen and (max-width: 900px) {
+    .navbar{
+        padding: 0;
+    }
+    .navbar .logo{
+        position: absolute;
+        top: 50px;
+        left: 50px;
+    
+    }
+    .navbar .menu-hamburguer{
+        display: block;
+    }
+    .nav-links{
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color:rgba(255,255,255,0.20);
+        backdrop-filter: blur(8px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+    .nav-links.mobile-menu{
+        margin-left: 0;
+    
+    }
+    .nav-links ul{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar .nav-links ul li{
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+  }
