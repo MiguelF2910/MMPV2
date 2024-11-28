@@ -1,0 +1,115 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    background-image: url("fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Estilos para el recuadro central */
+.login-form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+/* Estilos para la tabla de cursos */
+.table {
+    margin-top: 20px;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+}
+
+.table th {
+    background-color: #f2f2f2;
+}
+
+.table tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para el botón "Acceder" en la tabla */
+.table .btn-acceder {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.table .btn-acceder:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: #f9f9f9; /* Color de fondo más claro */
+    color: #333; /* Color del texto */
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .search-bar input {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.navbar .search-bar button {
+    background-color: #007bff; /* Color del botón de búsqueda */
+    color: #fff; /* Color del texto dentro del botón */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.navbar .nav-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-buttons .button {
+    margin-right: 10px;
+    background-color: #007bff; /* Color del fondo del botón */
+    border: 2px solid #007bff; /* Borde del botón */
+    color: #fff; /* Color del texto dentro del botón */
+    padding: 5px 10px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold; /* Texto en negritas */
+}
+
+
+
+
+

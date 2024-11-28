@@ -1,0 +1,126 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    /*font-family: Arial, sans-serif;*/
+
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+/* Estilos del menú de navegación */
+.navbar1 {
+    background-color: #f3e5b9;
+    padding: 10px 0;
+  }
+  
+  .navbar1 .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar input[type="text"] {
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    margin-right: 10px;
+  }
+  
+  .search-bar button {
+    padding: 8px 16px;
+    background-color: #E0E0E0;
+    border: none;
+    border-radius: 4px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .nav-buttons {
+    display: flex; /* Cambio importante: usar flexbox para la distribución de los botones */
+    align-items: center;
+    gap: 10px; /* Espaciado entre los botones */
+  }
+  
+  .nav-buttons button {
+    padding: 8px 16px;
+    background-color: #FFF;
+    border: 2px solid #E0E0E0;
+    border-radius: 4px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-buttons button:hover {
+    background-color: #E0E0E0;
+  }
+  
+/*Estilos del jumbotron*/
+
+.jumbotron{
+    display: flex;
+    max-width: 1200px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.texto{
+    flex-basis: 600px;
+    padding: 20px;
+}
+
+.imagen{
+    flex-basis: 500px;
+}
+
+.jumbotron h2{
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.jumbotron p{
+    font-size: 18px;
+    text-align: justify;
+}
+
+.jumbotron .btn{
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top:10px;
+}
+
+.jumbotron img{
+    width:100%;
+    height: auto;
+}
+/*Estilo del num articulos*/
+.num-articulos {
+  background-color: blue;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  display: inline-block;
+  margin-left: 0px; /* Puedes ajustar esto para controlar el espaciado entre el botón y el número */
+}
+
