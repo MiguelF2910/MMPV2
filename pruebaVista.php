@@ -1,9 +1,9 @@
 <?php
 // Ruta al intérprete de Python en el entorno virtual
-$pythonPath = 'C:\\xampp\\htdocs\\MMPV2\\.venv\\Scripts\\python.exe';
+$pythonPath = 'E:\\xampp\\htdocs\\MMPV2\\.venv\\Scripts\\python.exe';
 
 // Ruta al script Python
-$scriptPath = 'C:\\xampp\\htdocs\\MMPV2\\pruebaTerminal.py';
+$scriptPath = 'E:\\xampp\\htdocs\\MMPV2\\pruebaTerminal.py';
 
 // Ejecutar el script Python con el intérprete del entorno virtual
 $command = escapeshellcmd("$pythonPath $scriptPath");
