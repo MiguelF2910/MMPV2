@@ -8,7 +8,11 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
+<<<<<<< HEAD
 set VIRTUAL_ENV=E:\xampp\htdocs\MMPV2\.venv
+=======
+set VIRTUAL_ENV=C:\xampp\htdocs\MMPV2\.venv
+>>>>>>> c23a622b322f489e39eb59cb79952b13446a661d
 
 if not defined PROMPT set PROMPT=$P$G
 

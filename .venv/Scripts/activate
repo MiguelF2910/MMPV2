@@ -38,7 +38,11 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
+<<<<<<< HEAD
 VIRTUAL_ENV="E:\xampp\htdocs\MMPV2\.venv"
+=======
+VIRTUAL_ENV="C:\xampp\htdocs\MMPV2\.venv"
+>>>>>>> c23a622b322f489e39eb59cb79952b13446a661d
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
