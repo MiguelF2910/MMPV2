@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     const chatMessages = document.getElementById("chat-messages");
-    const messageInput = document.getElementById("message-input");
-    const sendButton = document.getElementById("send-button");
+    const messageInput = document.getElementById("chat-input");
+    const sendButton = document.getElementById("send-btn");
   
     // Función para agregar un mensaje al panel de chat
     const addMessage = (text, isUser = true) => {
       const messageDiv = document.createElement("div");
-      messageDiv.classList.add("message", isUser ? "user-message" : "bot-message");
+      messageDiv.classList.add("message", isUser  ? "sent" : "received");
       messageDiv.textContent = text;
       chatMessages.appendChild(messageDiv);
       chatMessages.scrollTop = chatMessages.scrollHeight; // Desplazarse hacia abajo
@@ -14,11 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // Función para enviar el mensaje al servidor
     const sendMessage = async () => {
-      const userInput = messageInput.value.trim();
+      const userInput = messageInput.value.trim() + " Pero ¿me podrías devolver todos los componentes dentro de corchetes y entre comillas simples?. Solo una serie de componentes, y si hay graficas integradas en el cpu, solo omitelas de la lista y no las menciones. Ejemplo: ['Componente1', 'Componente2']";
       if (!userInput) return; // No enviar mensajes vacíos
   
       // Agregar el mensaje del usuario al chat
-      addMessage(userInput, true);
+      addMessage(messageInput.value.trim(), true);
       messageInput.value = "";
   
       try {
