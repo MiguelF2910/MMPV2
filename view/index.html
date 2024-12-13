@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="chat-container">
+    <!-- Historial de conversaciones -->
+    <div class="chat-history">
+      <div class="header">
+        <h2>Historial</h2>
+      </div>
+      <ul id="conversation-list">
+        <li class="conversation-item">Primer presupuesto</li>
+      </ul>
+    </div>
+
+    <!-- Panel de chat -->
+    <div class="chat-panel">
+      <div class="chat-header">
+        <h2>Asistente de Micromasterpieces</h2>
+      </div>
+      <div id="chat-messages" class="chat-messages">
+        <!-- Mensajes aparecerán aquí -->
+      </div>
+      <div class="chat-input">
+        <input type="text" id="message-input" placeholder="Escribe un mensaje...">
+        <button id="send-button">➤</button>
+      </div>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>

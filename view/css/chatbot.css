@@ -1,0 +1,35 @@
+#chatbot {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  #chat-messages {
+    height: 400px;
+    overflow-y: auto;
+    padding: 1rem;
+    background: #f9f9f9;
+  }
+  
+  #chat-input-container {
+    display: flex;
+    border-top: 1px solid #ddd;
+  }
+  
+  #chat-input {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+  }
+  
+  #send-button {
+    padding: 0.5rem 1rem;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
