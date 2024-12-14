@@ -36,10 +36,17 @@ body {
 }
 
 .user-avatar {
+    background-image: url("../img/mico.jpg");
     width: 40px;
     height: 40px;
     background-color: #ddd;
     border-radius: 50%;
+    margin-right: 10px;
+    background-color: #ddd; /* Color de fondo por si la imagen no carga */
+    background-size: contain; /* Alternativa: usa "cover" si quieres que ocupe todo el círculo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el círculo */
+    border-radius: 50%; /* Hace que sea un círculo */
     margin-right: 10px;
 }
 
@@ -148,4 +155,69 @@ body {
 
 .chat-input .send-btn:hover {
     background-color: #0056b3;
+}
+
+/* Animación de "pensando" */
+.thinking {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    padding: 10px;
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.thinking::after {
+    content: "";
+    display: inline-block;
+    margin-left: 5px;
+    width: 5px;
+    height: 5px;
+    background-color: #333;
+    border-radius: 50%;
+    animation: dots 1.3s infinite ease-in-out;
+}
+
+@keyframes dots {
+    0%, 20% {
+        box-shadow: 5px 0 0 #333, 10px 0 0 #333, 15px 0 0 #333;
+    }
+    40% {
+        box-shadow: 5px 0 0 #ccc, 10px 0 0 #333, 15px 0 0 #333;
+    }
+    60% {
+        box-shadow: 5px 0 0 #ccc, 10px 0 0 #ccc, 15px 0 0 #333;
+    }
+    80%, 100% {
+        box-shadow: 5px 0 0 #ccc, 10px 0 0 #ccc, 15px 0 0 #ccc;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.bot-avatar {
+    background-image: url("../img/mico.jpg");
+    width: 30px;
+    height: 30px;
+    background-color: #ddd; /* Color de fondo por si la imagen no carga */
+    background-size: contain; /* Alternativa: usa "cover" si quieres que ocupe todo el círculo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el círculo */
+    border-radius: 50%; /* Hace que sea un círculo */
+    margin-right: 10px;
 }
