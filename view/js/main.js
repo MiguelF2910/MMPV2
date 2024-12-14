@@ -40,8 +40,23 @@ document.addEventListener("DOMContentLoaded", () => {
       messageInput.value.trim() +
       " Pero ¿me podrías devolver todos los componentes dentro de corchetes y entre comillas simples?. Solo una serie de componentes, y si hay graficas integradas en el cpu, solo omitelas de la lista y no las menciones. Ejemplo: ['Componente1', 'Componente2']";
     if (!userInput) return; // No enviar mensajes vacíos
-
-    // Agregar el mensaje del usuario al chat
+    const validKeywords = ["procesador", "ram", "placa base", "motherboard", "GPU", "SSD", "fuente de poder", "gabinete","presupuesto","pc","computadora","ordenador"];
+    const isInputValid = (input) => validKeywords.some((keyword) => input.toLowerCase().includes(keyword));
+    
+    if (!isInputValid(userInput)) {
+        addMessage(messageInput.value.trim(), true);
+        addMessage("Por favor, ingresa una consulta válida para poder entregarte un presupuesto.", false);
+        return;
+    } else {
+      const invalidKeywords = ["-","-","if","else","for","{","SELECT","DELETE","JOIN"];
+      const isOffTopic = (input) => invalidKeywords.some((keyword) => input.toLowerCase().includes(keyword));
+      
+      if (isOffTopic(userInput)) {
+          addMessage(messageInput.value.trim(), true);
+          addMessage("Lo siento, no admito valores negativos o inválidos.", false);
+          return;
+      } else {
+          // Agregar el mensaje del usuario al chat
     addMessage(messageInput.value.trim(), true);
     messageInput.value = "";
 
@@ -94,6 +109,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       addMessage("Error al procesar la solicitud. Inténtalo de nuevo.", false);
     }
+    }
+      }
+      
+    
   };
 
   // Manejar el clic del botón de enviar
