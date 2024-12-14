@@ -39,26 +39,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const userInput =
       messageInput.value.trim() +
       " Pero ¿me podrías devolver todos los componentes dentro de corchetes y entre comillas simples?. Solo una serie de componentes, y si hay graficas integradas en el cpu, solo omitelas de la lista y no las menciones. Ejemplo: ['Componente1', 'Componente2']";
-    if (!userInput) return; // No enviar mensajes vacíos
-    const validKeywords = ["procesador", "ram", "placa base", "motherboard", "GPU", "SSD", "fuente de poder", "gabinete","presupuesto","pc","computadora","ordenador"];
+    if (messageInput.value === "") return; // No enviar mensajes vacíos
+    const validKeywords = ["procesador", "ram", "placa base", "motherboard", "GPU", "cpu", "SSD", "fuente de poder", "gabinete","presupuesto","pc","computadora","ordenador","informatica"];
     const isInputValid = (input) => validKeywords.some((keyword) => input.toLowerCase().includes(keyword));
     
-    if (!isInputValid(userInput)) {
+    if (!isInputValid(messageInput.value.trim())) {
         addMessage(messageInput.value.trim(), true);
         addMessage("Por favor, ingresa una consulta válida para poder entregarte un presupuesto.", false);
         return;
     } else {
-      const invalidKeywords = ["-","-","if","else","for","{","SELECT","DELETE","JOIN"];
+      const invalidKeywords = ["-","-","{","SELECT","DELETE","JOIN"];
       const isOffTopic = (input) => invalidKeywords.some((keyword) => input.toLowerCase().includes(keyword));
       
-      if (isOffTopic(userInput)) {
+      if (isOffTopic(messageInput.value.trim())) {
           addMessage(messageInput.value.trim(), true);
-          addMessage("Lo siento, no admito valores negativos o inválidos.", false);
+          addMessage("Lo siento, no admito valores negativos, inválidos. ¿Hay algo en lo que te pueda ayudar?", false);
           return;
       } else {
           // Agregar el mensaje del usuario al chat
     addMessage(messageInput.value.trim(), true);
-    messageInput.value = "";
+    document.getElementById("chat-input").value = "";
 
     // Agregar la burbuja de "pensando"
     const thinkingBubble = addThinkingBubble();
@@ -111,7 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     }
       }
-      
     
   };
 
