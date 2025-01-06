@@ -139,7 +139,7 @@ if (isset($_SESSION["username"])) {
 						
 						
 						<li><a href="catalogo_herr.php">Cursos</a></li>
-						<li><a href="chatui.php">Nuevo chatbot</a></li>
+						<li><a href="../view/index.html">Nuevo chatbot</a></li>
 						<li><a href="#">Contactanos</a></li>
 						<!--li><a href="#">más</a></li-->
 						<li>
