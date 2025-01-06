@@ -24,7 +24,7 @@ def connectbd():
         database=db_name
     )
 # Montar la carpeta "frontend" como archivos estáticos
-frontend_path = os.path.join(os.path.dirname(__file__), "../view")
+frontend_path = os.path.join(os.path.dirname(__file__), "/view")
 app.mount("/static", StaticFiles(directory=frontend_path), name="static")
 
 # Ruta para servir el archivo index.html
