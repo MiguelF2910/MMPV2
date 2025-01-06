@@ -23,13 +23,19 @@ def connectbd():
         password=db_password,
         database=db_name
     )
-# Montar la carpeta "frontend" como archivos estáticos
-frontend_path = os.path.join(os.path.dirname(__file__), "/view")
+# Ruta al directorio del frontend
+frontend_path = os.path.join(os.path.dirname(__file__), "frontend")
+
+# Verificar que la carpeta 'frontend' existe
+if not os.path.exists(frontend_path):
+    raise RuntimeError(f"Directory '{frontend_path}' does not exist")
+
+# Montar los archivos estáticos desde la carpeta 'frontend'
 app.mount("/static", StaticFiles(directory=frontend_path), name="static")
 
-# Ruta para servir el archivo index.html
+# Servir el archivo index.html en la raíz
 @app.get("/")
-async def serve_frontend():
+async def serve_index():
     return FileResponse(os.path.join(frontend_path, "index.html"))
 
 @app.get("/")
