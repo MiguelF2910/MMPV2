@@ -24,7 +24,7 @@ def connectbd():
         database=db_name
     )
 # Ruta al directorio del frontend
-frontend_path = os.path.join(os.path.dirname(__file__), "frontend")
+frontend_path = os.path.join(os.path.dirname(__file__), "view")
 
 # Verificar que la carpeta 'frontend' existe
 if not os.path.exists(frontend_path):
