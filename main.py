@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from app.routes import router
 from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 import os  
 import pymysql
 
