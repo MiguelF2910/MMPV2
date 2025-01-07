@@ -36,7 +36,7 @@ if not os.path.exists(frontend_path):
 app.mount("/css", StaticFiles(directory="view/css"), name="css")
 app.mount("/js", StaticFiles(directory="view/js"), name="js")
 app.mount("/img", StaticFiles(directory="view/img"), name="img")
-
+app.mount("/controller", StaticFiles(directory="view/controller"), name="controller")
 
 # Servir el archivo index.html en la raíz
 @app.get("/")
