@@ -32,7 +32,11 @@ if not os.path.exists(frontend_path):
     raise RuntimeError(f"Directory '{frontend_path}' does not exist")
 
 # Montar los archivos estáticos desde la carpeta 'frontend'
-app.mount("/static", StaticFiles(directory=frontend_path), name="static")
+# Montar carpetas de archivos estáticos
+app.mount("/css", StaticFiles(directory="view/css"), name="css")
+app.mount("/js", StaticFiles(directory="view/js"), name="js")
+app.mount("/img", StaticFiles(directory="view/img"), name="img")
+
 
 # Servir el archivo index.html en la raíz
 @app.get("/")
